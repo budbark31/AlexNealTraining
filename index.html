@@ -3,72 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="[The Elevator Pitch Goes Here] - Serving the [Service Area] community.">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; form-action 'self';">
-    <title>Alex's Business</title>
+    <meta name="description" content="Specialized one-to-one soccer coaching - Serving the Pottstown and Reading PA areas.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; form-action 'self';">
+    <title>Cre8ive Soccer | One-to-One Soccer Coaching</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         /* Smooth scrolling applied natively */
         html {
             scroll-behavior: smooth;
         }
         body {
-            font-family: system-ui, -apple-system, sans-serif;
+            font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
             margin: 0;
             padding: 0;
-            color: #333;
+            color: #1a2a4a;
             line-height: 1.6;
+            background-color: #ffffff;
         }
         header {
-            background-color: #222;
-            color: #fff;
+            background-color: #1a2a4a;
+            color: #ffffff;
             padding: 1rem 0;
             text-align: center;
         }
+        header h1 {
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin: 0;
+        }
         .hero {
-            background-color: #f4f4f4;
+            background: linear-gradient(135deg, #1a2a4a 0%, #2d4a7c 100%);
+            color: #ffffff;
             text-align: center;
-            padding: 4rem 1rem;
+            padding: 5rem 1rem;
         }
         .hero h2 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            font-weight: 400;
+            opacity: 0.9;
         }
         .btn {
             display: inline-block;
-            background-color: #0056b3;
-            color: #fff;
-            padding: 0.75rem 1.5rem;
+            background-color: #ffffff;
+            color: #1a2a4a;
+            padding: 0.75rem 2rem;
             text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-top: 1rem;
-            transition: background-color 0.2s ease;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 1.5rem;
+            transition: all 0.3s ease;
+            border: 2px solid #ffffff;
         }
         .btn:hover {
-            background-color: #004494;
+            background-color: transparent;
+            color: #ffffff;
+        }
+        .about {
+            padding: 4rem 1rem;
+            text-align: center;
+            background-color: #ffffff;
+        }
+        .about h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a2a4a;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .about p {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
         }
         .services {
-            padding: 3rem 1rem;
+            padding: 4rem 1rem;
             text-align: center;
+            background-color: #f8f9fc;
+        }
+        .services h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a2a4a;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         .services-grid {
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: 1.5rem;
             margin-top: 2rem;
             flex-wrap: wrap;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .service-card {
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 1.5rem;
-            width: 250px;
+            background: #ffffff;
+            border: none;
+            border-radius: 10px;
+            padding: 2rem 1.5rem;
+            width: 280px;
+            box-shadow: 0 4px 15px rgba(26, 42, 74, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #1a2a4a;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(26, 42, 74, 0.15);
+        }
+        .service-card h3 {
+            color: #1a2a4a;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.75rem;
+        }
+        .service-card p {
+            color: #555;
+            font-size: 0.95rem;
         }
         .contact {
-            background-color: #eee;
-            padding: 3rem 1rem;
+            background-color: #1a2a4a;
+            color: #ffffff;
+            padding: 4rem 1rem;
             text-align: center;
+        }
+        .contact h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+        .contact > p {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        .contact a {
+            color: #ffffff;
+            text-decoration: underline;
         }
         form {
             max-width: 500px;
@@ -79,74 +168,144 @@
         .hidden {
             display: none;
         }
+        label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
         input, textarea {
             width: 100%;
-            padding: 0.5rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            padding: 0.75rem;
+            margin-bottom: 1.25rem;
+            border: none;
+            border-radius: 5px;
             box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
         }
         button {
-            background-color: #0056b3;
-            color: #fff;
+            background-color: #ffffff;
+            color: #1a2a4a;
             border: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: 5px;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
             cursor: pointer;
             width: 100%;
             font-size: 1rem;
-            font-weight: bold;
-            transition: background-color 0.2s ease;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
         }
         button:hover {
-            background-color: #004494;
+            background-color: #2d4a7c;
+            color: #ffffff;
         }
         footer {
-            background-color: #222;
-            color: #fff;
+            background-color: #0f1a2e;
+            color: #ffffff;
             text-align: center;
-            padding: 1rem 0;
+            padding: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+        /* Image Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            max-width: 1000px;
+            margin: 3rem auto 0;
+            padding: 0 1rem;
+        }
+        .gallery-img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(26, 42, 74, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(26, 42, 74, 0.15);
+        }
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            .gallery-img {
+                height: 220px;
+            }
+        }
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            .gallery-img {
+                height: 250px;
+            }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>[Business Name]</h1>
+        <h1>Cre8ive Soccer</h1>
     </header>
 
     <section class="hero">
-        <h2>[The Elevator Pitch Goes Here]</h2>
-        <p>Serving the [Service Area] community with top-tier results.</p>
-        <a href="#contact" class="btn">Get a Free Quote</a>
+        <h2>Specialized One-to-One Soccer Coaching</h2>
+        <p>Serving the Pottstown and Reading PA areas.</p>
+        <a href="#contact" class="btn">Book a Session</a>
+    </section>
+
+    <section class="about">
+        <h2>About Alex Neal</h2>
+        <p>My name is Alex Neal, and I am launching a specialized one to one soccer coaching service designed to give players the type of individual attention that is rarely available in traditional team environments. As an international college student athlete, I bring a unique perspective and a high level of experience to every training session. Before coming to the United States, I competed at a high level in England, representing England Schools and having multiple academy experiences, before playing 4 years of college soccer as well as some college coaching in my career. That experience developed not only my technical ability but also my understanding of elite training standards, professionalism, and leadership to get to the next level. Many young players today train primarily in team sessions, where coaches must focus on 15 to 20 players at once. While those environments are important, they rarely allow enough time for detailed technical development, position specific coaching, and individualized feedback. Cre8ive Soccer fills that gap.</p>
+        <div class="gallery-grid">
+            <img src="sqauttingLockHaven.jpeg" alt="Alex Neal playing soccer" class="gallery-img">
+            <img src="Headshot1.jpeg" alt="Alex Neal" class="gallery-img" style="object-position: center 30%;">
+            <img src="ScoringInFrontView.jpeg" alt="Alex Neal in action on the field" class="gallery-img">
+            
+            
+        </div>
     </section>
 
     <section class="services">
-        <h2>What We Do</h2>
+        <h2>Training Focus Areas</h2>
         <div class="services-grid">
             <div class="service-card">
-                <h3>[Service 1]</h3>
-                <p>Brief description of this specific service.</p>
+                <h3>Technical Mastery</h3>
+                <p>First touch, ball control, passing, and finishing to elevate your fundamental skills.</p>
             </div>
             <div class="service-card">
-                <h3>[Service 2]</h3>
-                <p>Brief description of this specific service.</p>
+                <h3>Position-Specific Training</h3>
+                <p>Tactical awareness and position-specific coaching tailored to your role on the field.</p>
             </div>
             <div class="service-card">
-                <h3>[Service 3]</h3>
-                <p>Brief description of this specific service.</p>
+                <h3>Speed & Agility</h3>
+                <p>Game-realistic movement patterns to improve quickness and on-field athleticism.</p>
+            </div>
+            <div class="service-card">
+                <h3>Confidence & pressure management</h3>
+                <p>Build mental strength and make smart decisions under pressure.</p>
+            </div>
+            <div class="service-card">
+                <h3>Professional Mentality</h3>
+                <p>Develop the habits and mindset learned from high-level competition.</p>
             </div>
         </div>
     </section>
 
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
-        <p>Email [Email Address] or call [Phone Number]</p>
+        <p>Email <a href="mailto:alexneal14@icloud.com">alexneal14@icloud.com</a> or call <a href="tel:+16108582009">+1 (610) 858-2009</a></p>
         
         <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
             <p class="hidden">
-                <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
             </p>
 
             <label for="name">Name</label>
@@ -163,7 +322,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2026 [Business Name]. All rights reserved.</p>
+        <p>&copy; 2026 Cre8ive Soccer. All rights reserved.</p>
     </footer>
 
 </body>
