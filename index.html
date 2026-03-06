@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="[The Elevator Pitch Goes Here] - Serving the [Service Area] community.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; form-action 'self';">
+    <title>Alex's Business</title>
+    <style>
+        /* Smooth scrolling applied natively */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .hero {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #0056b3;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background-color 0.2s ease;
+        }
+        .btn:hover {
+            background-color: #004494;
+        }
+        .services {
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        .services-grid {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        .service-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1.5rem;
+            width: 250px;
+        }
+        .contact {
+            background-color: #eee;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        /* Hidden class for the honeypot field */
+        .hidden {
+            display: none;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #0056b3;
+            color: #fff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.2s ease;
+        }
+        button:hover {
+            background-color: #004494;
+        }
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>[Business Name]</h1>
+    </header>
+
+    <section class="hero">
+        <h2>[The Elevator Pitch Goes Here]</h2>
+        <p>Serving the [Service Area] community with top-tier results.</p>
+        <a href="#contact" class="btn">Get a Free Quote</a>
+    </section>
+
+    <section class="services">
+        <h2>What We Do</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>[Service 1]</h3>
+                <p>Brief description of this specific service.</p>
+            </div>
+            <div class="service-card">
+                <h3>[Service 2]</h3>
+                <p>Brief description of this specific service.</p>
+            </div>
+            <div class="service-card">
+                <h3>[Service 3]</h3>
+                <p>Brief description of this specific service.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Email [Email Address] or call [Phone Number]</p>
+        
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <p class="hidden">
+                <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+            </p>
+
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">How can we help?</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 [Business Name]. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
