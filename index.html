@@ -24,16 +24,15 @@
             background-color: #ffffff;
         }
         header {
-            background-color: #1a2a4a;
-            color: #ffffff;
-            padding: 1rem 0;
+            background-color: #ffffff;
+            padding: 1.5rem 0;
             text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
         }
         header img {
-            max-height: 80px;
+            max-height: 150px;
             width: auto;
             display: block;
         }
@@ -250,12 +249,80 @@
                 height: 250px;
             }
         }
+        /* Pricing Section */
+        .pricing {
+            padding: 4rem 1rem;
+            text-align: center;
+            background-color: #ffffff;
+        }
+        .pricing h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a2a4a;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        .pricing-card {
+            background: #ffffff;
+            border: none;
+            border-radius: 10px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 4px 15px rgba(26, 42, 74, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #1a2a4a;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(26, 42, 74, 0.15);
+        }
+        .pricing-card h3 {
+            color: #1a2a4a;
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 0 0 1rem 0;
+        }
+        .pricing-card .price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #1a2a4a;
+            margin: 0.5rem 0 1rem 0;
+        }
+        .pricing-card p {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .pricing-card.featured {
+            border-top: 4px solid #2d4a7c;
+            background: linear-gradient(180deg, #f8f9fc 0%, #ffffff 100%);
+        }
+        @media (max-width: 768px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+            }
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="logocre8.jpg" alt="Cre8ive Soccer Logo">
+        <img src="logocre8cropped.jpg" alt="Cre8ive Soccer Logo">
     </header>
 
     <section class="hero">
@@ -298,6 +365,27 @@
             <div class="service-card">
                 <h3>Professional Mentality</h3>
                 <p>Develop the habits and mindset learned from high-level competition.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <h2>Pricing</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Single Session</h3>
+                <div class="price">$70</div>
+                <p>1 hour of specialized one-to-one training</p>
+            </div>
+            <div class="pricing-card featured">
+                <h3>4 Session Bundle</h3>
+                <div class="price">$260</div>
+                <p>$65 per session. A great way to build consistency.</p>
+            </div>
+            <div class="pricing-card">
+                <h3>8 Session Bundle</h3>
+                <div class="price">$480</div>
+                <p>$60 per session. Best value for serious long-term development.</p>
             </div>
         </div>
     </section>
